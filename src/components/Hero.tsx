@@ -7,7 +7,6 @@ import {
   Check,
   Github,
   Phone,
-  MapPin,
   ExternalLink,
   Layers,
   Server,

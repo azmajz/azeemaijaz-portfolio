@@ -3,6 +3,7 @@ export interface Project {
   title: string;
   subtitle: string;
   category: 'saas' | 'ecommerce' | 'modernization';
+  categories?: ('saas' | 'ecommerce' | 'modernization')[];
   company: string;
   timeline: string;
   role: string;
@@ -141,6 +142,7 @@ export const PORTFOLIO_DATA = {
       title: 'EZChildTrack Childcare SaaS Platform',
       subtitle: 'Mission-critical enterprise childcare management platform supporting 4,000+ schools across North America',
       category: 'saas',
+      categories: ['saas', 'modernization'],
       company: 'Origent Technologies',
       timeline: 'July 2024 – Present',
       role: 'Software Tech Analyst (Full Stack Development)',
@@ -157,7 +159,7 @@ export const PORTFOLIO_DATA = {
         { label: 'Core Tech Stack', value: 'Nuxt 4 + .NET Core' },
         { label: 'Testing Suite', value: 'Vitest Unit Tests' },
       ],
-      tags: ['SaaS', 'Enterprise', 'SSR', 'IIS ARR', 'MSSQL T-SQL', 'C# .NET Core'],
+      tags: ['SaaS', 'Enterprise', 'SSR', 'IIS ARR', 'MSSQL T-SQL', 'C# .NET Core', 'Modernization'],
       techStack: [
         'C# ASP.NET Core Web API',
         'Nuxt 4 (SSR)',
@@ -187,6 +189,7 @@ export const PORTFOLIO_DATA = {
       title: 'BullionStore Australia (Web & Mobile App)',
       subtitle: 'High-traffic precious metals trading platform with live market pricing, KYC compliance & mobile app',
       category: 'ecommerce',
+      categories: ['ecommerce', 'modernization'],
       company: 'Agami Technologies',
       timeline: '2021 – June 2024',
       role: 'Senior Full Stack Developer & Tech Lead',
@@ -237,6 +240,7 @@ export const PORTFOLIO_DATA = {
       title: 'F.A.T E-Commerce Platform',
       subtitle: 'Modern high-conversion fashion and apparel e-commerce store with seamless checkout',
       category: 'ecommerce',
+      categories: ['ecommerce'],
       company: 'Agami Technologies',
       timeline: '2022 – 2024',
       role: 'Senior Full Stack Developer',
@@ -267,6 +271,7 @@ export const PORTFOLIO_DATA = {
       title: 'Numismatix Australia',
       subtitle: 'Specialized numismatics and rare collectible coins e-commerce marketplace',
       category: 'ecommerce',
+      categories: ['ecommerce'],
       company: 'Agami Technologies',
       timeline: '2022 – 2023',
       role: 'Full Stack Developer',
@@ -295,6 +300,7 @@ export const PORTFOLIO_DATA = {
       title: 'Fusion24X7 Smart CRM & Real-Time Chat',
       subtitle: 'High-concurrency business operations CRM with real-time dynamic messaging stream',
       category: 'saas',
+      categories: ['saas'],
       company: 'Agami Technologies',
       timeline: '2022 – 2024',
       role: 'Full Stack Engineer & Module Architect',
@@ -326,6 +332,7 @@ export const PORTFOLIO_DATA = {
       title: 'Mubkhar Luxury Perfumes & Sandibad E-Commerce',
       subtitle: 'International multi-localized luxury fragrance e-commerce and shopping platforms',
       category: 'ecommerce',
+      categories: ['ecommerce', 'modernization'],
       company: 'Rexcel IT Services',
       timeline: 'Oct 2020 – 2021',
       role: 'Full Stack Software Developer',

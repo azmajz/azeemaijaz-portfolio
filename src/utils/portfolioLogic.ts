@@ -11,9 +11,15 @@ export function filterProjects(
   const normalizedQuery = query.trim().toLowerCase();
 
   return projects.filter((project) => {
-    // Category match
+    // Category match: checks project.category, project.categories array, or semantic fallback
     const categoryMatch =
-      category === 'all' || project.category === category;
+      category === 'all' ||
+      project.category === category ||
+      (Boolean(project.categories) && project.categories!.includes(category as any)) ||
+      (category === 'modernization' &&
+        (project.tags.some((tag) => /modern|migrat|strangler/i.test(tag)) ||
+          project.description.toLowerCase().includes('moderniz') ||
+          project.description.toLowerCase().includes('migrat')));
     if (!categoryMatch) return false;
 
     // Search query match

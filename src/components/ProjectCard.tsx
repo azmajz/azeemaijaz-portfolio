@@ -170,9 +170,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onSelect }) =
         <div>
           {/* Clean Unboxed Metadata with Typographic Separator */}
           <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 mb-2.5">
-            <span className="text-blue-600 dark:text-blue-400 font-medium capitalize">{project.category}</span>
+            <span className="text-blue-600 dark:text-blue-400 font-medium font-mono text-[11px] uppercase tracking-wide">
+              {project.categories?.includes('modernization')
+                ? 'Architecture & Migration'
+                : project.category === 'saas'
+                ? 'Enterprise SaaS'
+                : 'E-Commerce'}
+            </span>
             <span aria-hidden="true">·</span>
-            <span>{project.company}</span>
+            <span className="font-medium text-slate-700 dark:text-slate-300">{project.company}</span>
             <span aria-hidden="true">·</span>
             <span>{project.timeline}</span>
           </div>

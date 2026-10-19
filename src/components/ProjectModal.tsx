@@ -40,7 +40,13 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
         <div className="flex items-start justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
           <div>
             <div className="flex flex-wrap items-center gap-2 text-xs text-slate-500 dark:text-slate-400 mb-2">
-              <span className="text-blue-600 dark:text-blue-400 font-medium capitalize">{project.category}</span>
+              <span className="text-blue-600 dark:text-blue-400 font-medium font-mono text-[11px] uppercase tracking-wide">
+                {project.categories?.includes('modernization')
+                  ? 'Architecture & Migration'
+                  : project.category === 'saas'
+                  ? 'Enterprise SaaS'
+                  : 'E-Commerce'}
+              </span>
               <span aria-hidden="true">·</span>
               <span>{project.company}</span>
               <span aria-hidden="true">·</span>

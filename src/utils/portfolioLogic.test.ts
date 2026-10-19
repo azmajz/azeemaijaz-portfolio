@@ -17,8 +17,12 @@ test('filterProjects handles category filtering', () => {
   assert.equal(saasProjects.some((p) => p.id === 'ezchildtrack'), true);
 
   const ecommerceProjects = filterProjects(allProjects, 'ecommerce');
-  assert.equal(ecommerceProjects.every((p) => p.category === 'ecommerce'), true);
   assert.equal(ecommerceProjects.some((p) => p.id === 'bullionstore-au'), true);
+
+  const modernizationProjects = filterProjects(allProjects, 'modernization');
+  assert.equal(modernizationProjects.length >= 2, true);
+  assert.equal(modernizationProjects.some((p) => p.id === 'ezchildtrack'), true);
+  assert.equal(modernizationProjects.some((p) => p.id === 'bullionstore-au'), true);
 });
 
 test('filterProjects handles text search queries across stack, tags and urls', () => {
