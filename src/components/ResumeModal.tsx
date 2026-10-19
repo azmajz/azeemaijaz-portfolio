@@ -35,7 +35,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
     const textContent = `
 AZEEM AIJAZ
 Senior Full Stack Software Developer
-Gurugram, Haryana, India | ${profile.phone} | ${profile.email} | ${profile.github}
+India | ${profile.phone} | ${profile.email} | ${profile.github}
 
 PROFESSIONAL SUMMARY
 ${profile.summary}

@@ -42,32 +42,38 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onOpenContact }) => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-stretch">
           {/* Left Column: Typographic Hierarchy */}
           <div className="lg:col-span-7 flex flex-col justify-center">
-            {/* Editorial Kicker (Unboxed text with clean typographic separator) */}
-            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs font-semibold text-blue-600 dark:text-blue-400 mb-4 tracking-wide">
-              <span>{profile.title}</span>
-              <span aria-hidden="true" className="text-slate-400 dark:text-slate-500">·</span>
-              <span className="flex items-center gap-1 text-slate-600 dark:text-slate-400">
-                <MapPin className="w-3.5 h-3.5 text-slate-500 shrink-0" />
-                {profile.location}
-              </span>
+            {/* Top Status & Specialization Pill Row (Clean, modern Indian Tech Portfolio layout) */}
+            <div className="flex flex-wrap items-center gap-2.5 mb-5">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium bg-emerald-50 dark:bg-emerald-950/70 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/60 shadow-2xs">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span>Available for Senior / Tech Lead Roles</span>
+              </div>
+              <div className="inline-flex items-center gap-2 text-xs font-mono text-slate-600 dark:text-slate-400 px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60">
+                <span className="font-semibold text-blue-600 dark:text-blue-400">6+ Years Exp</span>
+                <span className="text-slate-300 dark:text-slate-600">·</span>
+                <span>Enterprise SaaS & AWS Cloud</span>
+              </div>
             </div>
 
             {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.12] mb-6 text-balance">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.12] mb-5 text-balance">
               Architecting enterprise SaaS platforms & modernizing cloud web applications.
             </h1>
 
             {/* Lead Prose */}
-            <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-8 max-w-2xl font-normal">
-              Senior Full Stack Engineer with 6+ years of experience delivering mission-critical
+            <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6 max-w-2xl font-normal">
+              Senior Full Stack Software Developer with 6+ years of specialized experience delivering mission-critical
               platforms across North America and Australia. Specializing in high-performance
               Nuxt/Vue (SSR), React, C# ASP.NET Core Web APIs, MS SQL Server (T-SQL SP Tuning),
-              Dockerized production environments, and zero-downtime legacy migrations using
+              AWS cloud infrastructure (EC2 with ALB, S3, SES), and zero-downtime legacy migrations using
               IIS ARR and the Strangler Fig pattern.
             </p>
 
-            {/* Primary Action Row */}
-            <div className="flex flex-wrap items-center gap-3 mb-8">
+            {/* Primary Action Row with Case Studies, Resume, Contact Me, and Email */}
+            <div className="flex flex-wrap items-center gap-3 mb-5">
               <a
                 href="#projects"
                 className="px-5 py-2.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg shadow-md shadow-blue-500/20 transition-colors whitespace-nowrap cursor-pointer"
@@ -80,6 +86,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onOpenContact }) => {
               >
                 <FileText className="w-4 h-4 text-blue-600 dark:text-blue-400" />
                 <span>View Full Resume</span>
+              </button>
+              <button
+                onClick={onOpenContact}
+                className="inline-flex items-center gap-2 px-4 py-2.5 text-sm font-medium text-blue-700 dark:text-blue-300 bg-blue-50 dark:bg-blue-950/60 hover:bg-blue-100 dark:hover:bg-blue-900/60 border border-blue-200 dark:border-blue-800/70 rounded-lg transition-colors whitespace-nowrap cursor-pointer"
+              >
+                <Mail className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+                <span>Contact Me</span>
               </button>
               <button
                 onClick={handleCopyEmail}
@@ -98,6 +111,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onOpenContact }) => {
                   </>
                 )}
               </button>
+            </div>
+
+            {/* Quick-Glance Stack Badges (Inspired by top Indian Tech Leads) */}
+            <div className="flex flex-wrap items-center gap-1.5 mb-6 text-[11px] font-mono text-slate-600 dark:text-slate-300">
+              <span className="text-slate-400 dark:text-slate-500 text-xs mr-1 font-sans">Core Stack:</span>
+              <span className="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60">C# .NET Core</span>
+              <span className="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60">Nuxt 4 / Vue 3 (SSR)</span>
+              <span className="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60">AWS (EC2 & ALB)</span>
+              <span className="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60">T-SQL Tuning</span>
+              <span className="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60">Claude AI</span>
             </div>
 
             {/* Direct Connect Metadata */}
@@ -184,10 +207,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onOpenContact }) => {
                   <Zap className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
                   <div>
                     <div className="font-semibold text-slate-800 dark:text-slate-200">
-                      T-SQL Tuning, Linux & Claude AI
+                      AWS Cloud, T-SQL & Claude AI
                     </div>
                     <div className="text-slate-500 dark:text-slate-400 mt-0.5">
-                      MS SQL Stored Procs, Linux (Ubuntu), Docker in Prod, Claude AI workflows
+                      AWS (EC2 & ALB, S3, SES), Linux (Ubuntu), MS SQL Stored Procs, Claude AI workflows
                     </div>
                   </div>
                 </div>

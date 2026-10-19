@@ -90,7 +90,7 @@ export const SkillsMatrix: React.FC = () => {
               {/* Category Footer Note */}
               <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/80 text-[11px] text-slate-500 font-mono flex items-center justify-between">
                 <span>{category.skills.length} core competencies</span>
-                <span className="text-slate-600 dark:text-slate-400">Production Tested</span>
+                <span className="text-slate-400 dark:text-slate-600 font-sans text-[10px]">Verified Technical Capability</span>
               </div>
             </div>
           ))}
@@ -109,9 +109,9 @@ export const SkillsMatrix: React.FC = () => {
             </div>
             <div className="flex flex-wrap items-center gap-2 text-xs font-mono text-slate-700 dark:text-slate-300">
               <span className="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-2.5 py-1 rounded">Linux (Ubuntu)</span>
+              <span className="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-2.5 py-1 rounded">AWS EC2 & ALB</span>
               <span className="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-2.5 py-1 rounded">IIS ARR Proxy</span>
               <span className="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-2.5 py-1 rounded">Vitest Unit Testing</span>
-              <span className="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-2.5 py-1 rounded">Docker in Prod</span>
               <span className="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-2.5 py-1 rounded">Claude AI Workflows</span>
               <span className="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-2.5 py-1 rounded">Google Merchant & FB Pixel</span>
               <span className="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-2.5 py-1 rounded">GA4 / Gtag SEO</span>

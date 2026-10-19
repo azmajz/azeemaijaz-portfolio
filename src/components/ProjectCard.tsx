@@ -76,7 +76,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onSelect }) =
             </div>
             <div className="text-[10px] text-slate-500 font-mono flex items-center justify-between">
               <span>bullionstore.com.au</span>
-              <span className="text-amber-600 dark:text-amber-400">Docker in Prod</span>
+              <span className="text-amber-600 dark:text-amber-400">AWS ALB + EC2 + S3</span>
             </div>
           </div>
         );
@@ -95,7 +95,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onSelect }) =
             </div>
             <div className="p-2.5 rounded bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 my-1 text-[11px] text-slate-700 dark:text-slate-300 shadow-xs">
               <div className="font-semibold text-slate-900 dark:text-white">Fashion Storefront & Checkout</div>
-              <div className="text-[10px] text-slate-500 dark:text-slate-400 mt-1">Sub-second paint, dynamic variant selectors & Docker deployment</div>
+              <div className="text-[10px] text-slate-500 dark:text-slate-400 mt-1">Sub-second paint, dynamic variant selectors & high-conversion checkout</div>
             </div>
             <div className="text-[10px] text-slate-500 font-mono flex items-center justify-between">
               <span>Vue.js · Node.js</span>

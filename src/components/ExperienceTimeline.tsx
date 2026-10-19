@@ -21,7 +21,7 @@ export const ExperienceTimeline: React.FC = () => {
           </h2>
           <p className="text-slate-600 dark:text-slate-400 text-sm mt-2 max-w-2xl">
             6+ years of continuous software engineering across SaaS products, high-traffic e-commerce,
-            enterprise legacy modernizations, Dockerized cloud environments, and team mentorship.
+            enterprise legacy modernizations, AWS cloud architectures (EC2, ALB, S3, SES), and team mentorship.
           </p>
         </div>
 
