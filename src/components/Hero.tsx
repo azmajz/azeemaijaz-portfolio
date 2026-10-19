@@ -151,12 +151,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onOpenContact }) => {
 
           {/* Right Column: Architectural Command Card & Production Profile */}
           <div className="lg:col-span-5 flex flex-col justify-center">
-            <div className="relative rounded-2xl bg-white dark:bg-gradient-to-b dark:from-slate-800/60 dark:to-slate-900/90 border border-slate-200 dark:border-slate-700/60 p-6 sm:p-7 shadow-xl dark:shadow-2xl backdrop-blur-sm overflow-hidden">
+            <div className="relative rounded-2xl bg-white dark:bg-[#0c1220] border border-slate-200 dark:border-slate-800 p-6 sm:p-7 shadow-xl dark:shadow-[0_8px_32px_rgba(0,0,0,0.6)] backdrop-blur-sm overflow-hidden">
               {/* Header inside card */}
-              <div className="flex items-start justify-between gap-4 pb-5 border-b border-slate-100 dark:border-slate-800">
+              <div className="flex items-start justify-between gap-4 pb-5 border-b border-slate-100 dark:border-slate-800/80">
                 <div className="flex items-center gap-3.5">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 p-0.5 shadow-inner">
-                    <div className="w-full h-full bg-white dark:bg-[#0a0f1d] rounded-[10px] flex items-center justify-center text-blue-600 dark:text-blue-400 font-mono font-bold text-base">
+                    <div className="w-full h-full bg-white dark:bg-[#070b14] rounded-[10px] flex items-center justify-center text-blue-600 dark:text-blue-400 font-mono font-bold text-base">
                       AA
                     </div>
                   </div>
@@ -178,37 +178,37 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onOpenContact }) => {
 
               {/* Core Architectural Pillars */}
               <div className="py-5 space-y-3.5 text-xs">
-                <div className="flex items-start gap-3 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-950/40 border border-slate-100 dark:border-slate-800/60">
+                <div className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 dark:bg-[#080d19] border border-slate-100 dark:border-slate-800/80 hover:dark:border-slate-700 hover:dark:bg-[#0d1627] transition-all">
                   <Layers className="w-4 h-4 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" />
                   <div>
                     <div className="font-semibold text-slate-800 dark:text-slate-200">
                       Full-Stack SSR, Mobile & Testing
                     </div>
-                    <div className="text-slate-500 dark:text-slate-400 mt-0.5">
+                    <div className="text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed">
                       Nuxt 4 (SSR), Vue 3, React.js, Ionic Capacitor (Play Store), Vitest
                     </div>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-950/40 border border-slate-100 dark:border-slate-800/60">
+                <div className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 dark:bg-[#080d19] border border-slate-100 dark:border-slate-800/80 hover:dark:border-slate-700 hover:dark:bg-[#0d1627] transition-all">
                   <Server className="w-4 h-4 text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5" />
                   <div>
                     <div className="font-semibold text-slate-800 dark:text-slate-200">
                       C# .NET Core, Micro-Services & ARR
                     </div>
-                    <div className="text-slate-500 dark:text-slate-400 mt-0.5">
+                    <div className="text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed">
                       ASP.NET Core Web API, Node.js, IIS ARR Reverse Proxy, Strangler Fig
                     </div>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-950/40 border border-slate-100 dark:border-slate-800/60">
+                <div className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 dark:bg-[#080d19] border border-slate-100 dark:border-slate-800/80 hover:dark:border-slate-700 hover:dark:bg-[#0d1627] transition-all">
                   <Zap className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
                   <div>
                     <div className="font-semibold text-slate-800 dark:text-slate-200">
                       AWS Cloud, T-SQL & Claude AI
                     </div>
-                    <div className="text-slate-500 dark:text-slate-400 mt-0.5">
+                    <div className="text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed">
                       AWS (EC2 & ALB, S3, SES), Linux (Ubuntu), MS SQL Stored Procs, Claude AI workflows
                     </div>
                   </div>
@@ -216,12 +216,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onOpenContact }) => {
               </div>
 
               {/* Code Insight Preview */}
-              <div className="pt-4 border-t border-slate-100 dark:border-slate-800">
+              <div className="pt-4 border-t border-slate-100 dark:border-slate-800/80">
                 <div className="flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400 mb-2 font-mono">
                   <span>web.config · ARR Reverse Proxy</span>
                   <span className="text-slate-400 dark:text-slate-500">IIS Strangler Dispatch</span>
                 </div>
-                <pre className="p-3 rounded-lg bg-slate-900 dark:bg-[#060a12] border border-slate-800 text-[11px] font-mono text-slate-300 overflow-x-auto leading-relaxed">
+                <pre className="p-3 rounded-lg bg-slate-900 dark:bg-[#050811] border border-slate-800 text-[11px] font-mono text-slate-300 overflow-x-auto leading-relaxed">
                   <code>
                     &lt;<span className="text-purple-400">rule</span> name="Strangler-Nuxt4" stopProcessing="true"&gt;{'\n'}
                     {'  '}&lt;<span className="text-blue-400">match</span> url="^(admin|parent)/.*" /&gt;{'\n'}
@@ -248,7 +248,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onOpenContact }) => {
                 <div className="text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-200 mt-1">
                   {metric.label}
                 </div>
-                <div className="text-xs text-slate-500 dark:text-slate-500 mt-0.5">
+                <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
                   {metric.context}
                 </div>
               </div>

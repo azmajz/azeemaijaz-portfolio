@@ -105,12 +105,12 @@ export const PORTFOLIO_DATA = {
     },
     {
       title: 'Cloud, DevOps & Production Servers',
-      description: 'Production containerization, reverse proxy routing, Linux servers, and AWS cloud management.',
+      description: 'AWS cloud infrastructure (EC2, ALB, S3, SES), reverse proxy routing, and Linux production servers.',
       skills: [
         { name: 'Linux (Ubuntu)' },
-        { name: 'Docker (Production Containerization)' },
+        { name: 'AWS Cloud Infrastructure (EC2, ALB)' },
+        { name: 'AWS S3 & SES (Notifications & Email)' },
         { name: 'IIS, web.config & ARR Reverse Proxy' },
-        { name: 'AWS (EC2, ALB, S3, SES, Route 53)' },
         { name: 'Vite & Webpack' },
         { name: 'NGINX & Apache' },
         { name: 'Git & Agile / Scrum SDLC' },

@@ -31,7 +31,7 @@ export const ArchitectureVisualizer: React.FC = () => {
           </div>
 
           {/* Interactive Pattern Selector */}
-          <div className="flex items-center gap-1.5 p-1 bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg shrink-0">
+          <div className="flex items-center gap-1.5 p-1 bg-slate-100 dark:bg-[#0a0f1d] border border-slate-200 dark:border-slate-800 rounded-lg shrink-0">
             <button
               onClick={() => {
                 setActiveTab('strangler');
@@ -40,7 +40,7 @@ export const ArchitectureVisualizer: React.FC = () => {
               className={`px-3.5 py-1.5 text-xs font-medium rounded-md transition-all cursor-pointer ${
                 activeTab === 'strangler'
                   ? 'bg-white dark:bg-blue-600 text-slate-900 dark:text-white shadow-xs font-semibold'
-                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                  : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
               Strangler Fig Migration
@@ -53,7 +53,7 @@ export const ArchitectureVisualizer: React.FC = () => {
               className={`px-3.5 py-1.5 text-xs font-medium rounded-md transition-all cursor-pointer ${
                 activeTab === 'ecommerce'
                   ? 'bg-white dark:bg-blue-600 text-slate-900 dark:text-white shadow-xs font-semibold'
-                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                  : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
               High-Traffic E-Commerce
@@ -91,8 +91,8 @@ export const ArchitectureVisualizer: React.FC = () => {
                 onClick={() => setActiveStage(idx)}
                 className={`text-left p-3.5 rounded-xl border transition-all cursor-pointer ${
                   activeStage === idx
-                    ? 'bg-blue-50/80 dark:bg-blue-600/10 border-blue-400 dark:border-blue-500/80 text-slate-900 dark:text-white shadow-xs'
-                    : 'bg-slate-50 dark:bg-slate-900/60 border-slate-200 dark:border-slate-800/80 text-slate-600 dark:text-slate-400 hover:border-slate-300 dark:hover:border-slate-700 hover:text-slate-900 dark:hover:text-slate-200'
+                    ? 'bg-blue-50/80 dark:bg-blue-600/15 border-blue-400 dark:border-blue-500/80 text-slate-900 dark:text-white shadow-xs'
+                    : 'bg-slate-50 dark:bg-[#070b14] border-slate-200 dark:border-slate-800/80 text-slate-600 dark:text-slate-300 hover:border-slate-300 dark:hover:border-slate-700 hover:text-slate-900 dark:hover:text-slate-100'
                 }`}
               >
                 <div className="flex items-center justify-between mb-1">
@@ -212,7 +212,7 @@ export const ArchitectureVisualizer: React.FC = () => {
           </div>
 
           {/* Detailed Stage Explanation */}
-          <div className="p-4 sm:p-5 rounded-xl bg-slate-50 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80">
+          <div className="p-4 sm:p-5 rounded-xl bg-slate-50 dark:bg-[#070b14] border border-slate-200 dark:border-slate-800">
             <div className="flex items-start gap-3">
               <div className="w-7 h-7 rounded-lg bg-blue-100 dark:bg-blue-600/20 border border-blue-200 dark:border-blue-500/30 flex items-center justify-center text-blue-700 dark:text-blue-400 font-mono text-xs font-bold shrink-0 mt-0.5">
                 {currentPlan.stages[activeStage].step}

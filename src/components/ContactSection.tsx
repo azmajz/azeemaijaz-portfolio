@@ -157,9 +157,15 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ id = 'contact' }
             </div>
 
             {/* Quick Status Box */}
-            <div className="p-5 rounded-2xl bg-blue-50/70 dark:bg-gradient-to-br dark:from-blue-950/30 dark:to-slate-900 border border-blue-200 dark:border-blue-900/40">
-              <div className="text-xs font-mono text-blue-700 dark:text-blue-400 font-semibold mb-1">
-                Contact Me
+            <div className="p-5 rounded-2xl bg-blue-50/80 dark:bg-[#090d18] border border-blue-200/80 dark:border-slate-800 shadow-xs dark:shadow-md">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                </span>
+                <div className="text-xs font-mono text-blue-700 dark:text-blue-400 font-bold uppercase tracking-wider">
+                  Availability & Engagement
+                </div>
               </div>
               <p className="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
                 Available for full-time senior engineering appointments, technical leadership pods,
@@ -223,10 +229,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ id = 'contact' }
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="e.g. Alex Morgan"
-                        className={`w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-900 border rounded-lg text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none transition-colors ${
+                        className={`w-full px-3.5 py-2.5 bg-slate-50 dark:bg-[#060913] border rounded-lg text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all ${
                           errors.name
                             ? 'border-red-500 focus:border-red-500'
-                            : 'border-slate-200 dark:border-slate-800 focus:border-blue-500'
+                            : 'border-slate-200 dark:border-slate-800 focus:border-blue-500 dark:focus:border-blue-500'
                         }`}
                       />
                       {errors.name && (
@@ -248,10 +254,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ id = 'contact' }
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="alex@company.com"
-                        className={`w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-900 border rounded-lg text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none transition-colors ${
+                        className={`w-full px-3.5 py-2.5 bg-slate-50 dark:bg-[#060913] border rounded-lg text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all ${
                           errors.email
                             ? 'border-red-500 focus:border-red-500'
-                            : 'border-slate-200 dark:border-slate-800 focus:border-blue-500'
+                            : 'border-slate-200 dark:border-slate-800 focus:border-blue-500 dark:focus:border-blue-500'
                         }`}
                       />
                       {errors.email && (
@@ -274,10 +280,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ id = 'contact' }
                       value={formData.subject}
                       onChange={handleChange}
                       placeholder="e.g. Senior Full Stack Engineer Opportunity"
-                      className={`w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-900 border rounded-lg text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none transition-colors ${
+                      className={`w-full px-3.5 py-2.5 bg-slate-50 dark:bg-[#060913] border rounded-lg text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all ${
                         errors.subject
                           ? 'border-red-500 focus:border-red-500'
-                          : 'border-slate-200 dark:border-slate-800 focus:border-blue-500'
+                          : 'border-slate-200 dark:border-slate-800 focus:border-blue-500 dark:focus:border-blue-500'
                       }`}
                     />
                     {errors.subject && (
@@ -299,10 +305,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ id = 'contact' }
                       value={formData.message}
                       onChange={handleChange}
                       placeholder="Describe the opportunity, technical challenges, or requirements..."
-                      className={`w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-900 border rounded-lg text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none transition-colors ${
+                      className={`w-full px-3.5 py-2.5 bg-slate-50 dark:bg-[#060913] border rounded-lg text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all ${
                         errors.message
                           ? 'border-red-500 focus:border-red-500'
-                          : 'border-slate-200 dark:border-slate-800 focus:border-blue-500'
+                          : 'border-slate-200 dark:border-slate-800 focus:border-blue-500 dark:focus:border-blue-500'
                       }`}
                     />
                     {errors.message && (

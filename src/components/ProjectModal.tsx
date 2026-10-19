@@ -110,8 +110,8 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
         {/* Content Body: Problem vs Solution */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-6 border-b border-slate-100 dark:border-slate-800">
-          <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900/40 border border-slate-200/80 dark:border-slate-800/80">
-            <h3 className="text-xs font-mono font-bold text-amber-700 dark:text-amber-400 uppercase tracking-wider mb-2">
+          <div className="p-4 rounded-xl bg-amber-50/60 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40">
+            <h3 className="text-xs font-mono font-bold text-amber-800 dark:text-amber-400 uppercase tracking-wider mb-2">
               Challenge / Monolith Bottleneck
             </h3>
             <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
@@ -119,8 +119,8 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900/40 border border-slate-200/80 dark:border-slate-800/80">
-            <h3 className="text-xs font-mono font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider mb-2">
+          <div className="p-4 rounded-xl bg-emerald-50/60 dark:bg-emerald-950/20 border border-emerald-200/70 dark:border-emerald-900/40">
+            <h3 className="text-xs font-mono font-bold text-emerald-800 dark:text-emerald-400 uppercase tracking-wider mb-2">
               Architectural Solution & Delivery
             </h3>
             <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
@@ -152,7 +152,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               <Cpu className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
               <span>Architectural Insight & Design Rationale</span>
             </h3>
-            <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800/90 rounded-lg p-3.5 leading-relaxed font-mono">
+            <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 bg-slate-50 dark:bg-[#060a14] border border-slate-200 dark:border-slate-800/90 rounded-lg p-3.5 leading-relaxed font-mono">
               {project.architectureNotes}
             </p>
           </div>
@@ -167,7 +167,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             {project.techStack.map((tech, idx) => (
               <span
                 key={idx}
-                className="px-2.5 py-1 text-xs font-mono text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-md"
+                className="px-2.5 py-1 text-xs font-mono text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-[#070b14] border border-slate-200 dark:border-slate-800 rounded-md"
               >
                 {tech}
               </span>

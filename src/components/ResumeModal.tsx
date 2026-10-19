@@ -69,16 +69,16 @@ ${education.map(edu => `${edu.degree}\n${edu.institution}\n${edu.period} | Grade
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-4xl bg-[#0d121f] text-slate-100 border border-slate-700/80 rounded-2xl shadow-2xl p-6 sm:p-10 my-6 text-left max-h-[92vh] overflow-y-auto print:max-h-none print:overflow-visible print:border-none print:shadow-none print:bg-white print:text-black"
+        className="relative w-full max-w-4xl bg-white dark:bg-[#0b101c] text-slate-900 dark:text-slate-100 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl p-6 sm:p-10 my-6 text-left max-h-[92vh] overflow-y-auto print:max-h-none print:overflow-visible print:border-none print:shadow-none print:bg-white print:text-black"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Floating Top Controls (Hidden on Print) */}
-        <div className="flex items-center justify-between gap-4 pb-6 border-b border-slate-800 no-print sticky -top-6 sm:-top-10 bg-[#0d121f]/95 backdrop-blur-md pt-2 z-10">
+        <div className="flex items-center justify-between gap-4 pb-6 border-b border-slate-200 dark:border-slate-800 no-print sticky -top-6 sm:-top-10 bg-white/95 dark:bg-[#0b101c]/95 backdrop-blur-md pt-2 z-10">
           <div>
-            <h2 id="resume-modal-title" className="text-lg font-bold text-white">
+            <h2 id="resume-modal-title" className="text-lg font-bold text-slate-900 dark:text-white">
               Curriculum Vitae Preview
             </h2>
-            <p className="text-xs text-slate-400">
+            <p className="text-xs text-slate-500 dark:text-slate-400">
               ATS-Optimized Formal Resume · 6+ Years Experience
             </p>
           </div>
@@ -86,24 +86,24 @@ ${education.map(edu => `${edu.degree}\n${edu.institution}\n${edu.period} | Grade
           <div className="flex items-center gap-2">
             <button
               onClick={handleCopyText}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-200 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg transition-colors"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 rounded-lg transition-colors cursor-pointer"
               title="Copy clean text version"
             >
               {copied ? (
                 <>
-                  <Check className="w-3.5 h-3.5 text-emerald-400" />
-                  <span className="text-emerald-400">Copied</span>
+                  <Check className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+                  <span className="text-emerald-600 dark:text-emerald-400">Copied</span>
                 </>
               ) : (
                 <>
-                  <Copy className="w-3.5 h-3.5 text-slate-400" />
+                  <Copy className="w-3.5 h-3.5 text-slate-500 dark:text-slate-400" />
                   <span>Copy Text</span>
                 </>
               )}
             </button>
             <button
               onClick={handlePrint}
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg shadow-sm transition-colors"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg shadow-sm transition-colors cursor-pointer"
               title="Print or Save to PDF via Browser Dialog"
             >
               <Printer className="w-3.5 h-3.5" />
@@ -111,7 +111,7 @@ ${education.map(edu => `${edu.degree}\n${edu.institution}\n${edu.period} | Grade
             </button>
             <button
               onClick={onClose}
-              className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors ml-1"
+              className="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors ml-1 cursor-pointer"
               aria-label="Close resume preview"
             >
               <X className="w-5 h-5" />
@@ -122,15 +122,15 @@ ${education.map(edu => `${edu.degree}\n${edu.institution}\n${edu.period} | Grade
         {/* Printable Document Container */}
         <div className="pt-6 print:pt-0 font-sans print:font-serif">
           {/* Resume Header */}
-          <div className="border-b-2 border-slate-700 pb-5 mb-6 print:border-black">
-            <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white uppercase print:text-black">
+          <div className="border-b-2 border-slate-200 dark:border-slate-800 pb-5 mb-6 print:border-black">
+            <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white uppercase print:text-black">
               {profile.name}
             </h1>
-            <p className="text-base font-semibold text-blue-400 mt-0.5 print:text-black">
+            <p className="text-base font-semibold text-blue-600 dark:text-blue-400 mt-0.5 print:text-black">
               {profile.title}
             </p>
 
-            <div className="flex flex-wrap items-center gap-y-1.5 gap-x-4 text-xs text-slate-300 mt-2.5 print:text-neutral-800 font-mono">
+            <div className="flex flex-wrap items-center gap-y-1.5 gap-x-4 text-xs text-slate-600 dark:text-slate-300 mt-2.5 print:text-neutral-800 font-mono">
               <span className="flex items-center gap-1">
                 <MapPin className="w-3.5 h-3.5 text-slate-400 print:text-black" />
                 {profile.location}
@@ -155,24 +155,24 @@ ${education.map(edu => `${edu.degree}\n${edu.institution}\n${edu.period} | Grade
 
           {/* Section: Professional Summary */}
           <div className="mb-6">
-            <h2 className="text-xs font-mono font-bold tracking-wider uppercase text-blue-400 border-b border-slate-800 pb-1 mb-2.5 print:text-black print:border-black">
+            <h2 className="text-xs font-mono font-bold tracking-wider uppercase text-blue-600 dark:text-blue-400 border-b border-slate-200 dark:border-slate-800 pb-1 mb-2.5 print:text-black print:border-black">
               Professional Summary
             </h2>
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed print:text-black">
+            <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed print:text-black">
               {profile.summary}
             </p>
           </div>
 
           {/* Section: Technical Skills */}
           <div className="mb-6">
-            <h2 className="text-xs font-mono font-bold tracking-wider uppercase text-blue-400 border-b border-slate-800 pb-1 mb-3 print:text-black print:border-black">
+            <h2 className="text-xs font-mono font-bold tracking-wider uppercase text-blue-600 dark:text-blue-400 border-b border-slate-200 dark:border-slate-800 pb-1 mb-3 print:text-black print:border-black">
               Technical Skills
             </h2>
             <div className="space-y-2 text-xs sm:text-sm">
               {skillCategories.map((cat, idx) => (
                 <div key={idx}>
-                  <span className="font-semibold text-white print:text-black">{cat.title}: </span>
-                  <span className="text-slate-300 print:text-neutral-800">
+                  <span className="font-semibold text-slate-900 dark:text-white print:text-black">{cat.title}: </span>
+                  <span className="text-slate-700 dark:text-slate-300 print:text-neutral-800">
                     {cat.skills.map((s) => s.name).join(', ')}
                   </span>
                 </div>
@@ -182,7 +182,7 @@ ${education.map(edu => `${edu.degree}\n${edu.institution}\n${edu.period} | Grade
 
           {/* Section: Professional Experience */}
           <div className="mb-6">
-            <h2 className="text-xs font-mono font-bold tracking-wider uppercase text-blue-400 border-b border-slate-800 pb-1 mb-4 print:text-black print:border-black">
+            <h2 className="text-xs font-mono font-bold tracking-wider uppercase text-blue-600 dark:text-blue-400 border-b border-slate-200 dark:border-slate-800 pb-1 mb-4 print:text-black print:border-black">
               Professional Experience
             </h2>
 
@@ -191,20 +191,20 @@ ${education.map(edu => `${edu.degree}\n${edu.institution}\n${edu.period} | Grade
                 <div key={exp.id}>
                   <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-1">
                     <div>
-                      <span className="text-sm font-bold text-white print:text-black">
+                      <span className="text-sm font-bold text-slate-900 dark:text-white print:text-black">
                         {exp.role}
                       </span>
                     </div>
-                    <span className="text-xs font-mono text-slate-400 print:text-neutral-700">
+                    <span className="text-xs font-mono text-slate-500 dark:text-slate-400 print:text-neutral-700">
                       {exp.period}
                     </span>
                   </div>
 
-                  <div className="text-xs text-blue-400 font-medium mb-2 print:text-neutral-800">
+                  <div className="text-xs text-blue-600 dark:text-blue-400 font-medium mb-2 print:text-neutral-800">
                     {exp.company} | {exp.location}
                   </div>
 
-                  <ul className="list-disc list-outside pl-4 space-y-1.5 text-xs text-slate-300 leading-relaxed print:text-black">
+                  <ul className="list-disc list-outside pl-4 space-y-1.5 text-xs text-slate-700 dark:text-slate-300 leading-relaxed print:text-black">
                     {exp.bullets.map((bullet, bIdx) => (
                       <li key={bIdx}>
                         {bullet}
@@ -218,18 +218,18 @@ ${education.map(edu => `${edu.degree}\n${edu.institution}\n${edu.period} | Grade
 
           {/* Section: Education */}
           <div className="mb-4">
-            <h2 className="text-xs font-mono font-bold tracking-wider uppercase text-blue-400 border-b border-slate-800 pb-1 mb-3 print:text-black print:border-black">
+            <h2 className="text-xs font-mono font-bold tracking-wider uppercase text-blue-600 dark:text-blue-400 border-b border-slate-200 dark:border-slate-800 pb-1 mb-3 print:text-black print:border-black">
               Education
             </h2>
             <div className="space-y-3">
               {education.map((edu, idx) => (
                 <div key={idx} className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 text-xs">
                   <div>
-                    <div className="font-bold text-white print:text-black">{edu.degree}</div>
-                    <div className="text-slate-400 print:text-neutral-700">{edu.institution}</div>
+                    <div className="font-bold text-slate-900 dark:text-white print:text-black">{edu.degree}</div>
+                    <div className="text-slate-500 dark:text-slate-400 print:text-neutral-700">{edu.institution}</div>
                   </div>
-                  <div className="font-mono text-slate-300 print:text-black">
-                    {edu.period} | <span className="font-semibold text-emerald-400 print:text-black">Grade: {edu.grade}</span>
+                  <div className="font-mono text-slate-600 dark:text-slate-300 print:text-black">
+                    {edu.period} | <span className="font-semibold text-emerald-600 dark:text-emerald-400 print:text-black">Grade: {edu.grade}</span>
                   </div>
                 </div>
               ))}

@@ -48,8 +48,8 @@ test('searchSkills filters skills across categories without level field', () => 
   assert.equal(results.length > 0, true);
   assert.equal(results[0].skills.some((s) => s.name.includes('Nuxt')), true);
 
-  const dockerResults = searchSkills(categories, 'Docker');
-  assert.equal(dockerResults.length > 0, true);
+  const awsResults = searchSkills(categories, 'AWS');
+  assert.equal(awsResults.length > 0, true);
 
   const emptyResults = searchSkills(categories, 'NonExistentSkillXYZ');
   assert.equal(emptyResults.length, 0);

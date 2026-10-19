@@ -40,13 +40,13 @@ export const SkillsMatrix: React.FC = () => {
 
           {/* Quick Skill Search */}
           <div className="relative w-full md:w-64 shrink-0">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 dark:text-slate-500" />
             <input
               type="text"
               value={skillQuery}
               onChange={(e) => setSkillQuery(e.target.value)}
               placeholder="Search skill (e.g. C#, Linux, Claude)..."
-              className="w-full pl-9 pr-4 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-colors"
+              className="w-full pl-9 pr-4 py-2 bg-white dark:bg-[#0a0f1d] border border-slate-200 dark:border-slate-800 rounded-lg text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-blue-500 dark:focus:border-blue-500 transition-colors shadow-2xs"
               aria-label="Filter skills by keyword"
             />
           </div>
@@ -79,7 +79,7 @@ export const SkillsMatrix: React.FC = () => {
                   {category.skills.map((skill, sIdx) => (
                     <div
                       key={sIdx}
-                      className="px-3 py-2 rounded-lg text-xs font-mono bg-slate-50 dark:bg-[#0c1220] border border-slate-200/90 dark:border-slate-800 text-slate-800 dark:text-slate-200 hover:border-blue-400 dark:hover:border-slate-600 hover:bg-blue-50/30 dark:hover:bg-slate-800/60 transition-colors shadow-2xs"
+                      className="px-3 py-2 rounded-lg text-xs font-mono bg-slate-50 dark:bg-[#070b14] border border-slate-200/90 dark:border-slate-800 text-slate-800 dark:text-slate-200 hover:border-blue-400 dark:hover:border-slate-600 hover:bg-blue-50/30 dark:hover:bg-slate-800/60 transition-colors shadow-2xs"
                     >
                       {skill.name}
                     </div>
@@ -90,7 +90,7 @@ export const SkillsMatrix: React.FC = () => {
               {/* Category Footer Note */}
               <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/80 text-[11px] text-slate-500 font-mono flex items-center justify-between">
                 <span>{category.skills.length} core competencies</span>
-                <span className="text-slate-400 dark:text-slate-600 font-sans text-[10px]">Verified Technical Capability</span>
+                <span className="text-slate-400 dark:text-slate-500 font-sans text-[10px]">Verified Technical Capability</span>
               </div>
             </div>
           ))}
@@ -108,14 +108,14 @@ export const SkillsMatrix: React.FC = () => {
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-2 text-xs font-mono text-slate-700 dark:text-slate-300">
-              <span className="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-2.5 py-1 rounded">Linux (Ubuntu)</span>
-              <span className="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-2.5 py-1 rounded">AWS EC2 & ALB</span>
-              <span className="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-2.5 py-1 rounded">IIS ARR Proxy</span>
-              <span className="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-2.5 py-1 rounded">Vitest Unit Testing</span>
-              <span className="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-2.5 py-1 rounded">Claude AI Workflows</span>
-              <span className="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-2.5 py-1 rounded">Google Merchant & FB Pixel</span>
-              <span className="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-2.5 py-1 rounded">GA4 / Gtag SEO</span>
-              <span className="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-2.5 py-1 rounded">T-SQL SP Optimization</span>
+              <span className="bg-slate-100 dark:bg-[#070b14] border border-slate-200 dark:border-slate-800 px-2.5 py-1 rounded">Linux (Ubuntu)</span>
+              <span className="bg-slate-100 dark:bg-[#070b14] border border-slate-200 dark:border-slate-800 px-2.5 py-1 rounded">AWS EC2 & ALB</span>
+              <span className="bg-slate-100 dark:bg-[#070b14] border border-slate-200 dark:border-slate-800 px-2.5 py-1 rounded">IIS ARR Proxy</span>
+              <span className="bg-slate-100 dark:bg-[#070b14] border border-slate-200 dark:border-slate-800 px-2.5 py-1 rounded">Vitest Unit Testing</span>
+              <span className="bg-slate-100 dark:bg-[#070b14] border border-slate-200 dark:border-slate-800 px-2.5 py-1 rounded">Claude AI Workflows</span>
+              <span className="bg-slate-100 dark:bg-[#070b14] border border-slate-200 dark:border-slate-800 px-2.5 py-1 rounded">Google Merchant & FB Pixel</span>
+              <span className="bg-slate-100 dark:bg-[#070b14] border border-slate-200 dark:border-slate-800 px-2.5 py-1 rounded">GA4 / Gtag SEO</span>
+              <span className="bg-slate-100 dark:bg-[#070b14] border border-slate-200 dark:border-slate-800 px-2.5 py-1 rounded">T-SQL SP Optimization</span>
             </div>
           </div>
         </div>

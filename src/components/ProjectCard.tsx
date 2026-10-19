@@ -12,32 +12,32 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onSelect }) =
     switch (project.id) {
       case 'ezchildtrack':
         return (
-          <div className="relative w-full h-44 bg-slate-100 dark:bg-[#0a101f] border-b border-slate-200 dark:border-slate-800 p-4 flex flex-col justify-between overflow-hidden">
+          <div className="relative w-full h-44 bg-slate-100 dark:bg-[#070b14] border-b border-slate-200 dark:border-slate-800/80 p-4 flex flex-col justify-between overflow-hidden">
             <div className="flex items-center justify-between text-[11px] text-slate-600 dark:text-slate-400 font-mono">
               <span className="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 font-medium">
                 <School className="w-3.5 h-3.5" />
                 EZChildTrack Multi-Tenant SaaS
               </span>
-              <span className="text-emerald-700 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950/60 px-1.5 py-0.5 rounded text-[10px] font-medium">
+              <span className="text-emerald-700 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950/60 px-1.5 py-0.5 rounded text-[10px] font-medium border border-emerald-200/60 dark:border-emerald-800/50">
                 4,000+ Schools
               </span>
             </div>
             <div className="grid grid-cols-3 gap-2 my-2">
-              <div className="p-2 rounded bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 text-[10px] shadow-xs">
+              <div className="p-2 rounded-lg bg-white dark:bg-[#0d1424] border border-slate-200 dark:border-slate-800 text-[10px] shadow-xs">
                 <div className="text-slate-500 dark:text-slate-400">Parent Portal</div>
                 <div className="text-slate-900 dark:text-white font-mono font-bold mt-0.5">Nuxt 4 SSR</div>
                 <div className="w-full bg-slate-200 dark:bg-slate-800 h-1.5 rounded-full mt-1.5 overflow-hidden">
                   <div className="bg-blue-500 h-full w-4/5" />
                 </div>
               </div>
-              <div className="p-2 rounded bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 text-[10px] shadow-xs">
+              <div className="p-2 rounded-lg bg-white dark:bg-[#0d1424] border border-slate-200 dark:border-slate-800 text-[10px] shadow-xs">
                 <div className="text-slate-500 dark:text-slate-400">IIS ARR Proxy</div>
                 <div className="text-slate-900 dark:text-white font-mono font-bold mt-0.5">web.config</div>
                 <div className="w-full bg-slate-200 dark:bg-slate-800 h-1.5 rounded-full mt-1.5 overflow-hidden">
                   <div className="bg-emerald-500 h-full w-11/12" />
                 </div>
               </div>
-              <div className="p-2 rounded bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 text-[10px] shadow-xs">
+              <div className="p-2 rounded-lg bg-white dark:bg-[#0d1424] border border-slate-200 dark:border-slate-800 text-[10px] shadow-xs">
                 <div className="text-slate-500 dark:text-slate-400">T-SQL Tuning</div>
                 <div className="text-slate-900 dark:text-white font-mono font-bold mt-0.5">Stored Procs</div>
                 <div className="w-full bg-slate-200 dark:bg-slate-800 h-1.5 rounded-full mt-1.5 overflow-hidden">
@@ -45,112 +45,112 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onSelect }) =
                 </div>
               </div>
             </div>
-            <div className="text-[10px] text-slate-500 font-mono flex items-center justify-between">
+            <div className="text-[10px] text-slate-500 dark:text-slate-400 font-mono flex items-center justify-between">
               <span>ezchildtrack.com</span>
-              <span className="text-blue-600 dark:text-blue-400">Strangler Fig + ARR</span>
+              <span className="text-blue-600 dark:text-blue-400 font-medium">Strangler Fig + ARR</span>
             </div>
           </div>
         );
 
       case 'bullionstore-au':
         return (
-          <div className="relative w-full h-44 bg-slate-100 dark:bg-[#0a101f] border-b border-slate-200 dark:border-slate-800 p-4 flex flex-col justify-between overflow-hidden">
+          <div className="relative w-full h-44 bg-slate-100 dark:bg-[#070b14] border-b border-slate-200 dark:border-slate-800/80 p-4 flex flex-col justify-between overflow-hidden">
             <div className="flex items-center justify-between text-[11px] text-slate-600 dark:text-slate-400 font-mono">
               <span className="flex items-center gap-1.5 text-amber-600 dark:text-amber-400 font-medium">
                 <Coins className="w-3.5 h-3.5" />
                 BullionStore Australia
               </span>
-              <span className="text-amber-700 dark:text-amber-400 bg-amber-100 dark:bg-amber-950/60 px-1.5 py-0.5 rounded text-[10px] font-medium">
+              <span className="text-amber-700 dark:text-amber-400 bg-amber-100 dark:bg-amber-950/60 px-1.5 py-0.5 rounded text-[10px] font-medium border border-amber-200/60 dark:border-amber-800/50">
                 Web & Play Store App
               </span>
             </div>
-            <div className="p-2.5 rounded bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 my-1 text-[11px] shadow-xs">
-              <div className="flex justify-between items-center text-slate-800 dark:text-slate-300">
+            <div className="p-2.5 rounded-lg bg-white dark:bg-[#0d1424] border border-slate-200 dark:border-slate-800 my-1 text-[11px] shadow-xs">
+              <div className="flex justify-between items-center text-slate-800 dark:text-slate-200 font-medium">
                 <span>Gold Spot (AUD/oz)</span>
                 <span className="font-mono text-emerald-600 dark:text-emerald-400 font-bold">$3,842.10</span>
               </div>
               <div className="flex justify-between items-center text-slate-500 dark:text-slate-400 text-[10px] mt-1">
                 <span>Ionic Capacitor Mobile App</span>
-                <span>GBG KYC + Xero</span>
+                <span className="font-mono text-slate-600 dark:text-slate-300">GBG KYC + Xero</span>
               </div>
             </div>
-            <div className="text-[10px] text-slate-500 font-mono flex items-center justify-between">
+            <div className="text-[10px] text-slate-500 dark:text-slate-400 font-mono flex items-center justify-between">
               <span>bullionstore.com.au</span>
-              <span className="text-amber-600 dark:text-amber-400">AWS ALB + EC2 + S3</span>
+              <span className="text-amber-600 dark:text-amber-400 font-medium">AWS ALB + EC2 + S3</span>
             </div>
           </div>
         );
 
       case 'fat-shop':
         return (
-          <div className="relative w-full h-44 bg-slate-100 dark:bg-[#0a101f] border-b border-slate-200 dark:border-slate-800 p-4 flex flex-col justify-between overflow-hidden">
+          <div className="relative w-full h-44 bg-slate-100 dark:bg-[#070b14] border-b border-slate-200 dark:border-slate-800/80 p-4 flex flex-col justify-between overflow-hidden">
             <div className="flex items-center justify-between text-[11px] text-slate-600 dark:text-slate-400 font-mono">
               <span className="flex items-center gap-1.5 text-pink-600 dark:text-pink-400 font-medium">
                 <ArrowUpRight className="w-3.5 h-3.5" />
                 F.A.T E-Commerce
               </span>
-              <span className="text-pink-700 dark:text-pink-400 bg-pink-100 dark:bg-pink-950/60 px-1.5 py-0.5 rounded text-[10px] font-medium">
+              <span className="text-pink-700 dark:text-pink-400 bg-pink-100 dark:bg-pink-950/60 px-1.5 py-0.5 rounded text-[10px] font-medium border border-pink-200/60 dark:border-pink-800/50">
                 f-a-t.shop
               </span>
             </div>
-            <div className="p-2.5 rounded bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 my-1 text-[11px] text-slate-700 dark:text-slate-300 shadow-xs">
+            <div className="p-2.5 rounded-lg bg-white dark:bg-[#0d1424] border border-slate-200 dark:border-slate-800 my-1 text-[11px] text-slate-700 dark:text-slate-300 shadow-xs">
               <div className="font-semibold text-slate-900 dark:text-white">Fashion Storefront & Checkout</div>
               <div className="text-[10px] text-slate-500 dark:text-slate-400 mt-1">Sub-second paint, dynamic variant selectors & high-conversion checkout</div>
             </div>
-            <div className="text-[10px] text-slate-500 font-mono flex items-center justify-between">
+            <div className="text-[10px] text-slate-500 dark:text-slate-400 font-mono flex items-center justify-between">
               <span>Vue.js · Node.js</span>
-              <span className="text-pink-600 dark:text-pink-400">Live Store</span>
+              <span className="text-pink-600 dark:text-pink-400 font-medium">Live Store</span>
             </div>
           </div>
         );
 
       case 'fusion24x7-crm':
         return (
-          <div className="relative w-full h-44 bg-slate-100 dark:bg-[#0a101f] border-b border-slate-200 dark:border-slate-800 p-4 flex flex-col justify-between overflow-hidden">
+          <div className="relative w-full h-44 bg-slate-100 dark:bg-[#070b14] border-b border-slate-200 dark:border-slate-800/80 p-4 flex flex-col justify-between overflow-hidden">
             <div className="flex items-center justify-between text-[11px] text-slate-600 dark:text-slate-400 font-mono">
               <span className="flex items-center gap-1.5 text-cyan-600 dark:text-cyan-400 font-medium">
                 <MessageSquare className="w-3.5 h-3.5" />
                 Fusion24X7 Smart CRM
               </span>
-              <span className="text-cyan-700 dark:text-cyan-400 bg-cyan-100 dark:bg-cyan-950/60 px-1.5 py-0.5 rounded text-[10px] font-medium">
+              <span className="text-cyan-700 dark:text-cyan-400 bg-cyan-100 dark:bg-cyan-950/60 px-1.5 py-0.5 rounded text-[10px] font-medium border border-cyan-200/60 dark:border-cyan-800/50">
                 Real-Time Stream
               </span>
             </div>
             <div className="space-y-1.5 my-1">
-              <div className="p-1.5 rounded bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 text-[10px] text-slate-700 dark:text-slate-300 flex items-center justify-between shadow-xs">
+              <div className="p-1.5 rounded-lg bg-white dark:bg-[#0d1424] border border-slate-200 dark:border-slate-800 text-[10px] text-slate-700 dark:text-slate-300 flex items-center justify-between shadow-xs">
                 <span>Inbound Ticket Stream</span>
                 <span className="font-mono text-emerald-600 dark:text-emerald-400 font-semibold">Connected</span>
               </div>
-              <div className="p-1.5 rounded bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 text-[10px] text-slate-700 dark:text-slate-300 flex items-center justify-between shadow-xs">
+              <div className="p-1.5 rounded-lg bg-white dark:bg-[#0d1424] border border-slate-200 dark:border-slate-800 text-[10px] text-slate-700 dark:text-slate-300 flex items-center justify-between shadow-xs">
                 <span>Dynamic Message Queue</span>
                 <span className="font-mono text-blue-600 dark:text-blue-400">&lt; 15ms Latency</span>
               </div>
             </div>
-            <div className="text-[10px] text-slate-500 font-mono flex items-center justify-between">
+            <div className="text-[10px] text-slate-500 dark:text-slate-400 font-mono flex items-center justify-between">
               <span>React.js + Express API + MongoDB</span>
-              <span className="text-cyan-600 dark:text-cyan-400">Role-Based Access</span>
+              <span className="text-cyan-600 dark:text-cyan-400 font-medium">Role-Based Access</span>
             </div>
           </div>
         );
 
       default:
         return (
-          <div className="relative w-full h-44 bg-slate-100 dark:bg-[#0a101f] border-b border-slate-200 dark:border-slate-800 p-4 flex flex-col justify-between overflow-hidden">
+          <div className="relative w-full h-44 bg-slate-100 dark:bg-[#070b14] border-b border-slate-200 dark:border-slate-800/80 p-4 flex flex-col justify-between overflow-hidden">
             <div className="flex items-center justify-between text-[11px] text-slate-600 dark:text-slate-400 font-mono">
               <span className="flex items-center gap-1.5 text-indigo-600 dark:text-indigo-400 font-medium">
                 <GitMerge className="w-3.5 h-3.5" />
                 {project.company}
               </span>
-              <span className="text-indigo-700 dark:text-indigo-400 bg-indigo-100 dark:bg-indigo-950/60 px-1.5 py-0.5 rounded text-[10px] font-medium">
+              <span className="text-indigo-700 dark:text-indigo-400 bg-indigo-100 dark:bg-indigo-950/60 px-1.5 py-0.5 rounded text-[10px] font-medium border border-indigo-200/60 dark:border-indigo-800/50">
                 Enterprise Engineering
               </span>
             </div>
-            <div className="p-2.5 rounded bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 text-[11px] text-slate-700 dark:text-slate-300 leading-relaxed line-clamp-2 shadow-xs">
+            <div className="p-2.5 rounded-lg bg-white dark:bg-[#0d1424] border border-slate-200 dark:border-slate-800 text-[11px] text-slate-700 dark:text-slate-300 leading-relaxed line-clamp-2 shadow-xs">
               {project.subtitle}
             </div>
-            <div className="text-[10px] text-slate-500 font-mono flex items-center justify-between">
+            <div className="text-[10px] text-slate-500 dark:text-slate-400 font-mono flex items-center justify-between">
               <span>{project.techStack.slice(0, 3).join(' · ')}</span>
-              <span className="text-indigo-600 dark:text-indigo-400">Case Study</span>
+              <span className="text-indigo-600 dark:text-indigo-400 font-medium">Case Study</span>
             </div>
           </div>
         );
@@ -160,7 +160,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onSelect }) =
   return (
     <div
       onClick={() => onSelect(project)}
-      className="group flex flex-col rounded-2xl bg-white dark:bg-[#090d18] border border-slate-200 dark:border-slate-800 hover:border-blue-400 dark:hover:border-slate-700/90 transition-all duration-200 overflow-hidden cursor-pointer shadow-sm hover:shadow-lg dark:hover:shadow-blue-950/10"
+      className="group flex flex-col rounded-2xl bg-white dark:bg-[#090d18] border border-slate-200 dark:border-slate-800/90 hover:border-blue-400 dark:hover:border-slate-700 transition-all duration-200 overflow-hidden cursor-pointer shadow-sm hover:shadow-lg dark:hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)]"
     >
       {/* Top Graphic Mockup */}
       {renderVisualMockup()}
@@ -242,7 +242,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onSelect }) =
             {project.techStack.slice(0, 4).map((tech, idx) => (
               <span
                 key={idx}
-                className="text-[11px] font-mono text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-900/90 px-2 py-0.5 rounded border border-slate-200 dark:border-slate-800/70"
+                className="text-[11px] font-mono text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-[#0c1220] px-2 py-0.5 rounded border border-slate-200 dark:border-slate-800"
               >
                 {tech}
               </span>
