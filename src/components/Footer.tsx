@@ -23,7 +23,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenResume }) => {
               {profile.name}
             </span>
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-              Senior Full Stack Software Developer · Gurugram, India
+              Senior Full Stack Software Developer
             </p>
           </div>
 

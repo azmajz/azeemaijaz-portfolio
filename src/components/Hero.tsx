@@ -184,10 +184,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onOpenContact }) => {
                   <Zap className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
                   <div>
                     <div className="font-semibold text-slate-800 dark:text-slate-200">
-                      T-SQL Tuning, Docker & AWS
+                      T-SQL Tuning, Linux & Claude AI
                     </div>
                     <div className="text-slate-500 dark:text-slate-400 mt-0.5">
-                      MS SQL Server Stored Procedures, MongoDB, Docker in Prod, AWS
+                      MS SQL Stored Procs, Linux (Ubuntu), Docker in Prod, Claude AI workflows
                     </div>
                   </div>
                 </div>

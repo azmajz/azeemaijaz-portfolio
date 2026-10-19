@@ -159,7 +159,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ id = 'contact' }
             {/* Quick Status Box */}
             <div className="p-5 rounded-2xl bg-blue-50/70 dark:bg-gradient-to-br dark:from-blue-950/30 dark:to-slate-900 border border-blue-200 dark:border-blue-900/40">
               <div className="text-xs font-mono text-blue-700 dark:text-blue-400 font-semibold mb-1">
-                Notice Period & Availability
+                Contact Me
               </div>
               <p className="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
                 Available for full-time senior engineering appointments, technical leadership pods,
