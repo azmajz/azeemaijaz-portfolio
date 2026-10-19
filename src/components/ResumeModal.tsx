@@ -52,7 +52,7 @@ ${exp.bullets.map(b => `• ${b}`).join('\n')}
 `).join('\n')}
 
 EDUCATION
-${education.map(edu => `${edu.degree}\n${edu.institution}\n${edu.period} | ${edu.score}`).join('\n\n')}
+${education.map(edu => `${edu.degree}\n${edu.institution}\n${edu.period} | Grade: ${edu.grade}`).join('\n\n')}
     `.trim();
 
     navigator.clipboard.writeText(textContent);
@@ -79,7 +79,7 @@ ${education.map(edu => `${edu.degree}\n${edu.institution}\n${edu.period} | ${edu
               Curriculum Vitae Preview
             </h2>
             <p className="text-xs text-slate-400">
-              ATS-Optimized Formal Resume
+              ATS-Optimized Formal Resume · 6+ Years Experience
             </p>
           </div>
 
@@ -169,42 +169,14 @@ ${education.map(edu => `${edu.degree}\n${edu.institution}\n${edu.period} | ${edu
               Technical Skills
             </h2>
             <div className="space-y-2 text-xs sm:text-sm">
-              <div>
-                <span className="font-semibold text-white print:text-black">Frontend: </span>
-                <span className="text-slate-300 print:text-neutral-800">
-                  React.js, Next.js (SSR), Vue.js, Nuxt.js (SSR), Alpine.js, JavaScript (ES6+), TypeScript, HTML5, CSS3, Bootstrap, Tailwind CSS
-                </span>
-              </div>
-              <div>
-                <span className="font-semibold text-white print:text-black">Backend: </span>
-                <span className="text-slate-300 print:text-neutral-800">
-                  Node.js, Express.js, Nest.js, ASP.NET 6 Web API, ASP.NET MVC, Laravel, PHP CI
-                </span>
-              </div>
-              <div>
-                <span className="font-semibold text-white print:text-black">Databases: </span>
-                <span className="text-slate-300 print:text-neutral-800">
-                  MS SQL Server (Stored Procedures, Optimization), MySQL, MongoDB, Firestore
-                </span>
-              </div>
-              <div>
-                <span className="font-semibold text-white print:text-black">Cloud & DevOps: </span>
-                <span className="text-slate-300 print:text-neutral-800">
-                  AWS (EC2, RDS, S3, SES, Route 53), Azure, IIS, Firebase, Docker, NGINX/Apache, Ubuntu Linux
-                </span>
-              </div>
-              <div>
-                <span className="font-semibold text-white print:text-black">Build & Tooling: </span>
-                <span className="text-slate-300 print:text-neutral-800">
-                  Vite, Webpack, Babel, NPM, Yarn
-                </span>
-              </div>
-              <div>
-                <span className="font-semibold text-white print:text-black">Tools & Practices: </span>
-                <span className="text-slate-300 print:text-neutral-800">
-                  Git, SVN, Agile/Scrum, SDLC, Performance Optimization, SEO, Lighthouse, Accessibility, Debugging, Localization (i18n)
-                </span>
-              </div>
+              {skillCategories.map((cat, idx) => (
+                <div key={idx}>
+                  <span className="font-semibold text-white print:text-black">{cat.title}: </span>
+                  <span className="text-slate-300 print:text-neutral-800">
+                    {cat.skills.map((s) => s.name).join(', ')}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -257,7 +229,7 @@ ${education.map(edu => `${edu.degree}\n${edu.institution}\n${edu.period} | ${edu
                     <div className="text-slate-400 print:text-neutral-700">{edu.institution}</div>
                   </div>
                   <div className="font-mono text-slate-300 print:text-black">
-                    {edu.period} | <span className="font-bold text-emerald-400 print:text-black">{edu.score}</span>
+                    {edu.period} | <span className="font-semibold text-emerald-400 print:text-black">Grade: {edu.grade}</span>
                   </div>
                 </div>
               ))}

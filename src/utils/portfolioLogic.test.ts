@@ -10,7 +10,7 @@ import { PORTFOLIO_DATA } from '../data/portfolioData.ts';
 
 test('filterProjects handles category filtering', () => {
   const allProjects = PORTFOLIO_DATA.projects;
-  assert.equal(allProjects.length >= 5, true);
+  assert.equal(allProjects.length >= 6, true);
 
   const saasProjects = filterProjects(allProjects, 'saas');
   assert.equal(saasProjects.every((p) => p.category === 'saas'), true);
@@ -21,7 +21,7 @@ test('filterProjects handles category filtering', () => {
   assert.equal(ecommerceProjects.some((p) => p.id === 'bullionstore-au'), true);
 });
 
-test('filterProjects handles text search queries across stack and description', () => {
+test('filterProjects handles text search queries across stack, tags and urls', () => {
   const allProjects = PORTFOLIO_DATA.projects;
 
   const nuxtResults = filterProjects(allProjects, 'all', 'Nuxt');
@@ -31,21 +31,27 @@ test('filterProjects handles text search queries across stack and description', 
   const kycResults = filterProjects(allProjects, 'all', 'GreenID');
   assert.equal(kycResults.length, 1);
   assert.equal(kycResults[0].id, 'bullionstore-au');
+
+  const mubkharResults = filterProjects(allProjects, 'all', 'Mubkhar');
+  assert.equal(mubkharResults.length, 1);
+  assert.equal(mubkharResults[0].id, 'mubkhar-sandibad');
 });
 
-test('searchSkills filters skills across categories', () => {
+test('searchSkills filters skills across categories without level field', () => {
   const categories = PORTFOLIO_DATA.skillCategories;
 
   const results = searchSkills(categories, 'Nuxt');
   assert.equal(results.length > 0, true);
   assert.equal(results[0].skills.some((s) => s.name.includes('Nuxt')), true);
 
+  const dockerResults = searchSkills(categories, 'Docker');
+  assert.equal(dockerResults.length > 0, true);
+
   const emptyResults = searchSkills(categories, 'NonExistentSkillXYZ');
   assert.equal(emptyResults.length, 0);
 });
 
 test('validateContactForm checks valid and invalid submissions', () => {
-  // Empty
   const invalid = validateContactForm({
     name: '',
     email: 'bademail',
@@ -58,7 +64,6 @@ test('validateContactForm checks valid and invalid submissions', () => {
   assert.equal(typeof invalid.errors.subject, 'string');
   assert.equal(typeof invalid.errors.message, 'string');
 
-  // Valid
   const valid = validateContactForm({
     name: 'Sarah Connor',
     email: 'sarah@techcorp.com',
@@ -74,7 +79,7 @@ test('formatMetricCounter splits numbers and units', () => {
   assert.equal(res1.number, '4,000');
   assert.equal(res1.unit, '+ Schools');
 
-  const res2 = formatMetricCounter('85.7%');
-  assert.equal(res2.number, '85.7');
-  assert.equal(res2.unit, '%');
+  const res2 = formatMetricCounter('6+ Yrs');
+  assert.equal(res2.number, '6');
+  assert.equal(res2.unit, '+ Yrs');
 });

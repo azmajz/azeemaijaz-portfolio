@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTheme } from './utils/useTheme';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { ProjectsSection } from './components/ProjectsSection';
@@ -11,6 +12,7 @@ import { Footer } from './components/Footer';
 import { ResumeModal } from './components/ResumeModal';
 
 export default function App() {
+  const [theme, toggleTheme] = useTheme();
   const [isResumeOpen, setIsResumeOpen] = useState(false);
 
   const handleOpenContact = () => {
@@ -21,9 +23,11 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#090d16] text-slate-100 selection:bg-blue-600 selection:text-white">
-      {/* Top navigation */}
+    <div className="min-h-screen bg-white dark:bg-[#090d16] text-slate-900 dark:text-slate-100 selection:bg-blue-600 selection:text-white transition-colors duration-150">
+      {/* Top navigation with Theme Toggle */}
       <Navbar
+        theme={theme}
+        onToggleTheme={toggleTheme}
         onOpenResume={() => setIsResumeOpen(true)}
         onOpenContact={handleOpenContact}
       />

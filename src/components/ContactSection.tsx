@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { PORTFOLIO_DATA } from '../data/portfolioData';
 import { validateContactForm, ContactFormData } from '../utils/portfolioLogic';
-import { Mail, Phone, MapPin, Github, Send, CheckCircle2, Copy, Check, MessageSquare } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Send, CheckCircle2, Copy, Check } from 'lucide-react';
 
 interface ContactSectionProps {
   id?: string;
@@ -52,17 +52,17 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ id = 'contact' }
   };
 
   return (
-    <section id={id} className="py-20 border-t border-slate-800/80 bg-[#070b14]/70">
+    <section id={id} className="py-20 border-t border-slate-200 dark:border-slate-800/80 bg-slate-50/50 dark:bg-[#070b14]/70">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-12">
-          <div className="text-xs font-mono font-medium text-blue-400 mb-2 tracking-wide uppercase">
+          <div className="text-xs font-mono font-medium text-blue-600 dark:text-blue-400 mb-2 tracking-wide uppercase">
             Start a Conversation
           </div>
-          <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">
             Get in Touch
           </h2>
-          <p className="text-slate-400 text-sm mt-2 max-w-2xl">
+          <p className="text-slate-600 dark:text-slate-400 text-sm mt-2 max-w-2xl">
             Currently open to Senior & Lead Full Stack Engineering opportunities, system architecture
             consulting, and cloud modernization initiatives.
           </p>
@@ -71,34 +71,34 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ id = 'contact' }
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Left Column: Direct Info & Quick Channels */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="rounded-2xl bg-[#090d18] border border-slate-800 p-6 sm:p-7 shadow-md">
-              <h3 className="text-base font-bold text-white mb-4">
+            <div className="rounded-2xl bg-white dark:bg-[#090d18] border border-slate-200 dark:border-slate-800 p-6 sm:p-7 shadow-xs dark:shadow-md">
+              <h3 className="text-base font-bold text-slate-900 dark:text-white mb-4">
                 Direct Contact Channels
               </h3>
 
               <div className="space-y-4 text-xs sm:text-sm">
                 {/* Email item */}
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-blue-600/10 border border-blue-500/30 flex items-center justify-center text-blue-400 shrink-0 mt-0.5">
+                  <div className="w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-600/10 border border-blue-200 dark:border-blue-500/30 flex items-center justify-center text-blue-600 dark:text-blue-400 shrink-0 mt-0.5">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div className="flex-1">
-                    <div className="text-xs text-slate-400">Direct Email</div>
+                    <div className="text-xs text-slate-500 dark:text-slate-400">Direct Email</div>
                     <div className="flex items-center gap-2 mt-0.5">
                       <a
                         href={`mailto:${profile.email}`}
-                        className="text-white hover:text-blue-400 font-mono transition-colors"
+                        className="text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 font-mono transition-colors font-medium"
                       >
                         {profile.email}
                       </a>
                       <button
                         onClick={handleCopyEmail}
-                        className="p-1 text-slate-400 hover:text-white"
+                        className="p-1 text-slate-400 hover:text-slate-700 dark:hover:text-white cursor-pointer"
                         title="Copy email address"
                         aria-label="Copy email address"
                       >
                         {copiedEmail ? (
-                          <Check className="w-3.5 h-3.5 text-emerald-400" />
+                          <Check className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                         ) : (
                           <Copy className="w-3.5 h-3.5" />
                         )}
@@ -109,14 +109,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ id = 'contact' }
 
                 {/* Phone item */}
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-blue-600/10 border border-blue-500/30 flex items-center justify-center text-blue-400 shrink-0 mt-0.5">
+                  <div className="w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-600/10 border border-blue-200 dark:border-blue-500/30 flex items-center justify-center text-blue-600 dark:text-blue-400 shrink-0 mt-0.5">
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="text-xs text-slate-400">Telephone / Mobile</div>
+                    <div className="text-xs text-slate-500 dark:text-slate-400">Telephone / Mobile</div>
                     <a
                       href={`tel:${profile.phone.replace(/\s+/g, '')}`}
-                      className="text-white hover:text-blue-400 font-mono transition-colors mt-0.5 inline-block"
+                      className="text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 font-mono transition-colors mt-0.5 inline-block font-medium"
                     >
                       {profile.phone}
                     </a>
@@ -125,12 +125,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ id = 'contact' }
 
                 {/* Location item */}
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-blue-600/10 border border-blue-500/30 flex items-center justify-center text-blue-400 shrink-0 mt-0.5">
+                  <div className="w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-600/10 border border-blue-200 dark:border-blue-500/30 flex items-center justify-center text-blue-600 dark:text-blue-400 shrink-0 mt-0.5">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="text-xs text-slate-400">Current Base</div>
-                    <div className="text-slate-200 mt-0.5 font-medium">
+                    <div className="text-xs text-slate-500 dark:text-slate-400">Current Base</div>
+                    <div className="text-slate-800 dark:text-slate-200 mt-0.5 font-medium">
                       {profile.location}
                     </div>
                   </div>
@@ -138,16 +138,16 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ id = 'contact' }
 
                 {/* GitHub item */}
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-blue-600/10 border border-blue-500/30 flex items-center justify-center text-blue-400 shrink-0 mt-0.5">
+                  <div className="w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-600/10 border border-blue-200 dark:border-blue-500/30 flex items-center justify-center text-blue-600 dark:text-blue-400 shrink-0 mt-0.5">
                     <Github className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="text-xs text-slate-400">Open Source & Code</div>
+                    <div className="text-xs text-slate-500 dark:text-slate-400">Open Source & Code</div>
                     <a
                       href={profile.github}
                       target="_blank"
                       rel="noreferrer noopener"
-                      className="text-white hover:text-blue-400 font-mono transition-colors mt-0.5 inline-block"
+                      className="text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 font-mono transition-colors mt-0.5 inline-block font-medium"
                     >
                       github.com/{profile.githubUsername}
                     </a>
@@ -157,11 +157,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ id = 'contact' }
             </div>
 
             {/* Quick Status Box */}
-            <div className="p-5 rounded-2xl bg-gradient-to-br from-blue-950/30 to-slate-900 border border-blue-900/40">
-              <div className="text-xs font-mono text-blue-400 font-medium mb-1">
+            <div className="p-5 rounded-2xl bg-blue-50/70 dark:bg-gradient-to-br dark:from-blue-950/30 dark:to-slate-900 border border-blue-200 dark:border-blue-900/40">
+              <div className="text-xs font-mono text-blue-700 dark:text-blue-400 font-semibold mb-1">
                 Notice Period & Availability
               </div>
-              <p className="text-xs text-slate-300 leading-relaxed">
+              <p className="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
                 Available for full-time senior engineering appointments, technical leadership pods,
                 and hybrid/remote arrangements.
               </p>
@@ -170,17 +170,17 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ id = 'contact' }
 
           {/* Right Column: Contact Message Form */}
           <div className="lg:col-span-7">
-            <div className="rounded-2xl bg-[#090d18] border border-slate-800 p-6 sm:p-8 shadow-md">
+            <div className="rounded-2xl bg-white dark:bg-[#090d18] border border-slate-200 dark:border-slate-800 p-6 sm:p-8 shadow-xs dark:shadow-md">
               {submitted ? (
                 <div className="py-8 text-center space-y-4">
-                  <div className="w-12 h-12 rounded-full bg-emerald-950/80 border border-emerald-500/50 text-emerald-400 flex items-center justify-center mx-auto">
+                  <div className="w-12 h-12 rounded-full bg-emerald-100 dark:bg-emerald-950/80 border border-emerald-300 dark:border-emerald-500/50 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mx-auto">
                     <CheckCircle2 className="w-6 h-6" />
                   </div>
-                  <h3 className="text-xl font-bold text-white">
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white">
                     Message Prepared!
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-300 max-w-md mx-auto leading-relaxed">
-                    Thank you, <span className="text-white font-semibold">{formData.name}</span>. You can dispatch this message directly via your email client or copy the message text.
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-md mx-auto leading-relaxed">
+                    Thank you, <span className="text-slate-900 dark:text-white font-semibold">{formData.name}</span>. You can dispatch this message directly via your email client or copy the message text.
                   </p>
 
                   <div className="flex flex-wrap items-center justify-center gap-3 pt-3">
@@ -190,7 +190,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ id = 'contact' }
                       )}&body=${encodeURIComponent(
                         `From: ${formData.name} (${formData.email})\n\n${formData.message}`
                       )}`}
-                      className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg shadow-sm transition-colors"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg shadow-sm transition-colors cursor-pointer"
                     >
                       <Mail className="w-3.5 h-3.5" />
                       <span>Open in Mail App</span>
@@ -200,7 +200,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ id = 'contact' }
                         setSubmitted(false);
                         setFormData({ name: '', email: '', subject: '', message: '' });
                       }}
-                      className="px-4 py-2.5 text-xs font-medium text-slate-300 hover:text-white bg-slate-800 rounded-lg transition-colors"
+                      className="px-4 py-2.5 text-xs font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white bg-slate-100 dark:bg-slate-800 rounded-lg transition-colors cursor-pointer"
                     >
                       Send Another Message
                     </button>
@@ -212,9 +212,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ id = 'contact' }
                     <div>
                       <label
                         htmlFor="name"
-                        className="block text-xs font-medium text-slate-300 mb-1.5"
+                        className="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1.5"
                       >
-                        Your Name <span className="text-red-400">*</span>
+                        Your Name <span className="text-red-500">*</span>
                       </label>
                       <input
                         id="name"
@@ -223,23 +223,23 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ id = 'contact' }
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="e.g. Alex Morgan"
-                        className={`w-full px-3.5 py-2.5 bg-slate-900 border rounded-lg text-xs text-white placeholder-slate-500 focus:outline-none transition-colors ${
+                        className={`w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-900 border rounded-lg text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none transition-colors ${
                           errors.name
                             ? 'border-red-500 focus:border-red-500'
-                            : 'border-slate-800 focus:border-blue-500'
+                            : 'border-slate-200 dark:border-slate-800 focus:border-blue-500'
                         }`}
                       />
                       {errors.name && (
-                        <p className="text-[11px] text-red-400 mt-1">{errors.name}</p>
+                        <p className="text-[11px] text-red-500 mt-1">{errors.name}</p>
                       )}
                     </div>
 
                     <div>
                       <label
                         htmlFor="email"
-                        className="block text-xs font-medium text-slate-300 mb-1.5"
+                        className="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1.5"
                       >
-                        Email Address <span className="text-red-400">*</span>
+                        Email Address <span className="text-red-500">*</span>
                       </label>
                       <input
                         id="email"
@@ -248,14 +248,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ id = 'contact' }
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="alex@company.com"
-                        className={`w-full px-3.5 py-2.5 bg-slate-900 border rounded-lg text-xs text-white placeholder-slate-500 focus:outline-none transition-colors ${
+                        className={`w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-900 border rounded-lg text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none transition-colors ${
                           errors.email
                             ? 'border-red-500 focus:border-red-500'
-                            : 'border-slate-800 focus:border-blue-500'
+                            : 'border-slate-200 dark:border-slate-800 focus:border-blue-500'
                         }`}
                       />
                       {errors.email && (
-                        <p className="text-[11px] text-red-400 mt-1">{errors.email}</p>
+                        <p className="text-[11px] text-red-500 mt-1">{errors.email}</p>
                       )}
                     </div>
                   </div>
@@ -263,9 +263,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ id = 'contact' }
                   <div>
                     <label
                       htmlFor="subject"
-                      className="block text-xs font-medium text-slate-300 mb-1.5"
+                      className="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1.5"
                     >
-                      Role or Inquiry Subject <span className="text-red-400">*</span>
+                      Role or Inquiry Subject <span className="text-red-500">*</span>
                     </label>
                     <input
                       id="subject"
@@ -274,23 +274,23 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ id = 'contact' }
                       value={formData.subject}
                       onChange={handleChange}
                       placeholder="e.g. Senior Full Stack Engineer Opportunity"
-                      className={`w-full px-3.5 py-2.5 bg-slate-900 border rounded-lg text-xs text-white placeholder-slate-500 focus:outline-none transition-colors ${
+                      className={`w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-900 border rounded-lg text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none transition-colors ${
                         errors.subject
                           ? 'border-red-500 focus:border-red-500'
-                          : 'border-slate-800 focus:border-blue-500'
+                          : 'border-slate-200 dark:border-slate-800 focus:border-blue-500'
                       }`}
                     />
                     {errors.subject && (
-                      <p className="text-[11px] text-red-400 mt-1">{errors.subject}</p>
+                      <p className="text-[11px] text-red-500 mt-1">{errors.subject}</p>
                     )}
                   </div>
 
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-xs font-medium text-slate-300 mb-1.5"
+                      className="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1.5"
                     >
-                      Message / Project Details <span className="text-red-400">*</span>
+                      Message / Project Details <span className="text-red-500">*</span>
                     </label>
                     <textarea
                       id="message"
@@ -299,14 +299,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ id = 'contact' }
                       value={formData.message}
                       onChange={handleChange}
                       placeholder="Describe the opportunity, technical challenges, or requirements..."
-                      className={`w-full px-3.5 py-2.5 bg-slate-900 border rounded-lg text-xs text-white placeholder-slate-500 focus:outline-none transition-colors ${
+                      className={`w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-900 border rounded-lg text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none transition-colors ${
                         errors.message
                           ? 'border-red-500 focus:border-red-500'
-                          : 'border-slate-800 focus:border-blue-500'
+                          : 'border-slate-200 dark:border-slate-800 focus:border-blue-500'
                       }`}
                     />
                     {errors.message && (
-                      <p className="text-[11px] text-red-400 mt-1">{errors.message}</p>
+                      <p className="text-[11px] text-red-500 mt-1">{errors.message}</p>
                     )}
                   </div>
 
